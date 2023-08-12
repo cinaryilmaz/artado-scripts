@@ -58,7 +58,7 @@ const translations = {
     }
 }
 
-const t = translations[lang];
+const t = translations[lang] || translations.en;
 
 var middle = document.querySelector("div.middle");
 middle.innerHTML = `<h1 class="countdown-title">${t.title}</h1><div class="countdown">
