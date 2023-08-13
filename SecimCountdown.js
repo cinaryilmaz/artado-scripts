@@ -37,26 +37,76 @@ if (lang === "")
   lang = "en";
 }
 
+// Currently supported languages: Turkish, English, Greek, Azerbaijani, Russian, German, Bulgarian, French, Spanish, Polish, Japanese
+
 const translations = {
-    tr: {
-        title: "Türkiye'de yerel seçimlere kalan süre",
-        days: "GÜN",
-        hours: "SAAT",
-        minutes: "DAKİKA"
-    },
-    en: {
-        title: "Time to local elections in Turkey",
-        days: "DAYS",
-        hours: "HOURS",
-        minutes: "MINUTES"
-    },
-    el: {
-        title: "Ώρα για τοπικές εκλογές στην Τουρκία",
-        days: "ΜΕΡΕΣ",
-        hours: "ΩΡΕΣ",
-        minutes: "ΛΕΠΤΑ"
-    }
-}
+  tr: {
+      title: "Türkiye'de yerel seçimlere kalan süre",
+      days: "GÜN",
+      hours: "SAAT",
+      minutes: "DAKİKA"
+  },
+  en: {
+      title: "Time to local elections in Turkey",
+      days: "DAYS",
+      hours: "HOURS",
+      minutes: "MINUTES"
+  },
+  el: {
+      title: "Ώρα για τοπικές εκλογές στην Τουρκία",
+      days: "ΜΕΡΕΣ",
+      hours: "ΩΡΕΣ",
+      minutes: "ΛΕΠΤΑ"
+  },
+  az: {
+      title: "Türkiyə yerli seçkilərinə qalan vaxt",
+      days: "GÜN",
+      hours: "SAAT",
+      minutes: "DƏQİQƏ"
+  },
+  ru: {
+      title: "Время до местных выборов в Турции",
+      days: "ДНИ",
+      hours: "ЧАСЫ",
+      minutes: "МИНУТЫ"
+  },
+  de: {
+      title: "Zeit bis zu den Kommunalwahlen in der Türkei",
+      days: "TAGE",
+      hours: "STUNDEN",
+      minutes: "MINUTEN"
+  },
+  bg: {
+      title: "Време за местни избори в Турция",
+      days: "ДНИ",
+      hours: "ЧАСА",
+      minutes: "МИНУТИ"
+  },
+  fr: {
+      title: "Temps jusqu'aux élections locales en Turquie",
+      days: "JOURS",
+      hours: "HEURES",
+      minutes: "MINUTES"
+  },
+  es: {
+      title: "Tiempo hasta las elecciones locales en Turquía",
+      days: "DÍAS",
+      hours: "HORAS",
+      minutes: "MINUTOS"
+  },
+  pl: {
+      title: "Czas do lokalnych wyborów w Turcji",
+      days: "DNI",
+      hours: "GODZINY",
+      minutes: "MINUTY"
+  },
+  ja: {
+      title: "トルコの地方選挙までの時間",
+      days: "日",
+      hours: "時間",
+      minutes: "分"
+  }
+};
 
 const t = translations[lang] || translations.en;
 
