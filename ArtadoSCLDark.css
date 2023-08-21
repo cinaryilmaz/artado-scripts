@@ -1,7 +1,11 @@
 /* 
 Note: This theme is for dark mode but you can use it in any mode since it INCLUDES the dark mode.
 */
+
+/* night.css FOR FORCING NIGHT THEME. */
+
 @import url('/styles/global.css');
+
 /* */
 :root {
     /* Tokens */
@@ -130,9 +134,14 @@ Note: This theme is for dark mode but you can use it in any mode since it INCLUD
 .bottom_tabs,
 .left_tabs,
 .right_tabs,
-.save {
+.save,
+#autocomplete-list {
     background-color: var(--gray-100) !important;
     color: white !important;
+}
+
+#autocomplete-list li:hover {
+    color: #000;
 }
 
 #ImageButton1,
@@ -167,8 +176,8 @@ select {
     border: solid 1px white;
 }
 
-
 /* THE ACTUAL THEME CONTENT STARTS HERE */
+
 body,
 body form,
 .card,
@@ -177,7 +186,9 @@ body form,
 .bottom_tabs,
 .left_tabs,
 .right_tabs,
-.save {
+.save,
+#autocomplete-list,
+#offcanvasRight {
     background-color: #000 !important;
 }
 
@@ -207,7 +218,9 @@ body form,
 select,
 .r_div,
 .tab,
-.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet {
+.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,
+#autocomplete-list,
+#offcanvasRight {
     border-color: #0095ff !important;
     color: #e9f6ff !important;
 }
@@ -225,6 +238,7 @@ div.gs-webResult.gs-result a.gs-title:link,
 div.gs-webResult.gs-result a.gs-title:visited {
     color: #0095ff !important;
 }
+
 div.gs-webResult.gs-result a.gs-title:link b,
 div.gs-webResult.gs-result a.gs-title:visited b {
     color: #afdeff !important;
@@ -239,6 +253,9 @@ div.gs-webResult.gs-result a.gs-title:visited b {
     content: url("https://media.discordapp.net/attachments/1099825312424013874/1139701740896264304/image.png");
 }
 
+hr.ince {
+  background-image: linear-gradient(to right, rgb(0, 149, 255), rgb(0, 0, 0), rgb(0, 149, 255));
+}
 
 /* remove this rule to use a custom logo */
 #Image1 {
