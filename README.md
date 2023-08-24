@@ -6,3 +6,4 @@ Artado Search extensions and themes made by me.
 
 ## Extensions
 * [SecimCountdown](https://www.artadosearch.com/Workshop/55)
+* What is my IP
