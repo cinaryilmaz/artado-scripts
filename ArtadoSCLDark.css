@@ -5,14 +5,19 @@ Note: This theme is for dark mode but you can use it in any mode since it INCLUD
 /* night.css FOR FORCING NIGHT THEME. */
 
 @import url('/styles/global.css');
-
 /* */
 :root {
+    --bg-primary: #2e3440;
+    --bg-secondary: #181b28;
+    --bg-tertiary: #181b28;
+    --bg-quaternary: #4c566a;
+    --text: #eceff4;
+    --accent: #d8dee9;
     /* Tokens */
-    --background: var(--gray-100);
-    --background-hover: color-mix(in srgb, var(--gray-50) 16%, black);
+    --background: #0d0f17;
+    --background-hover: #4c566a;
     --background-active: color-mix(in srgb, var(--gray-50) 40%, black);
-    --background-selected: color-mix(in srgb, var(--gray-50) 24%, black);
+    --background-selected: #4c566a;
     --background-selected-hover: color-mix(in srgb, var(--gray-50) 32%, black);
     --background-inverse: var(--gray-10);
     --bacground-inverse-hover: color-mix(var(--gray-10), var(--gray-20) 50%);
@@ -43,10 +48,10 @@ Note: This theme is for dark mode but you can use it in any mode since it INCLUD
     --layer-accent-active-01: var(--gray-70);
     --layer-accent-active-02: var(--gray-50);
     --layer-accent-active-03: var(--gray-80);
-    --field-01: var(--gray-90);
+    --field-01: #4c566a;
     --field-02: var(--gray-80);
     --field-03: var(--gray-70);
-    --field-hover-01: color-mix(in srgb, var(--gray-90), var(--gray-100) 50%);
+    --field-hover-01: #4c566a;
     --field-hover-02: color-mix(in srgb, var(--gray-80), var(--gray-90) 50%);
     --field-hover-03: color-mix(in srgb, var(--gray-70), var(--gray-80) 50%);
     --border-interactive: var(--blue-60);
@@ -76,7 +81,7 @@ Note: This theme is for dark mode but you can use it in any mode since it INCLUD
     --text-inverse: var(--gray-100);
     --text-disabled: color-mix(var(--gray-10) 25%, black);
     --link-primary: var(--blue-40);
-    --link-primary-hover: var(--blue-30);
+    --link-primary-hover: #4c566a;
     --link-secondary: var(--blue-30);
     --link-inverse: var(--blue-60);
     --link-visited: var(--purple-40);
@@ -121,59 +126,75 @@ Note: This theme is for dark mode but you can use it in any mode since it INCLUD
     --skeleton-background: color-mix(var(--gray-80), var(--gray-90) 50%);
 }
 
-.searchinput,
-.text-reset,
-.btn-close,
-.save {
+.searchinput, .text-reset, .btn-close, .save {
     color: white !important;
 }
 
-.card,
-.card a,
-.searchbar,
-.bottom_tabs,
-.left_tabs,
-.right_tabs,
-.save,
-#autocomplete-list {
-    background-color: var(--gray-100) !important;
+.card, .card a, .searchbar, .bottom_tabs, .left_tabs, .right_tabs, .save, #autocomplete-list {
+    background-color: #181b28 !important;
     color: white !important;
 }
+    #autocomplete-list li:hover {
+        color: #000;
+    }
 
-#autocomplete-list li:hover {
-    color: #000;
-}
-
-#ImageButton1,
-.text-reset,
-.btn-close {
+#ImageButton1, .text-reset, .btn-close {
     filter: invert(100%) sepia(0%) saturate(7484%) hue-rotate(260deg) brightness(97%) contrast(102%);
 }
 
 .card:hover {
-    box-shadow: 0 10px 15px -3px #444444, 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px #444444,0 4px 6px -2px rgba(0,0,0,0.1);
 }
 
 #offcanvasRight {
-    background-color: #262626 !important;
+    background-color: #181b28;
 }
 
 .tab {
     color: #cccccc !important
 }
 
-.tab:hover {
-    color: #afaeae !important;
-}
+    .tab:hover {
+        color: #afaeae !important;
+    }
 
 select {
     color: var(--text-primary) !important;
-    background: var(--field-01) !important;
+    background: #3b4252 !important;
     font: var(--body-compact-01);
 }
 
 .r_div {
     border: solid 1px white;
+}
+
+.results .result-item, .gsc-result {
+    box-shadow: rgba(255, 255, 255, 0.02) 0px 1px 3px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px 1px;
+}
+
+.gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
+    color: #fff !important
+}
+
+.gs-webResult div.gs-visibleUrl {
+    color: #5069be !important
+}
+
+    .gs-webResult div.gs-visibleUrl b {
+        color: #5069be !important
+    }
+
+.gs-snippet {
+    color: #848896 !important
+}
+
+.gs-webResult.gs-result a.gs-title:link, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
+    color: #fff !important
+}
+
+.gs-webResult.gs-result a.gs-title:link b {
+    color: #fff !important;
+    font: bold
 }
 
 /* THE ACTUAL THEME CONTENT STARTS HERE */
@@ -192,21 +213,8 @@ body form,
     background-color: #000 !important;
 }
 
-#beta_text {
-    display: none;
-}
-
-.beta:after {
-    visibility: visible;
-    top: 0;
-    left: 0;
-    content: "SCL DARK";
-    color: #0095ff;
-}
-
 .form-control,
 .card,
-.beta,
 .bi,
 .card-body span,
 .searchinput,
@@ -220,9 +228,55 @@ select,
 .tab,
 .gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,
 #autocomplete-list,
-#offcanvasRight {
+#offcanvasRight,
+#searchbar div,
+.searchbar,
+.tiles_header hr
+{
     border-color: #0095ff !important;
     color: #e9f6ff !important;
+}
+
+#searchbar div,
+#autocomplete-list,
+.searchbar,
+.tiles_header hr
+{
+    border: 1px solid;
+    border-radius: .25rem;
+}
+
+#searchbar:has(> .flex) {
+    border: 0;
+}
+
+#searchbutton {
+    padding-right: 1.25rem !important;
+}
+
+.tiles {
+    justify-content: center;
+}
+
+#autocomplete-list li
+{
+    color: #0095ff;
+}
+
+#autocomplete-list li:hover
+{
+    color: #fff;
+}
+
+.btn {
+    background-color: #0095ff !important;
+}
+
+.btn-outline-success,
+select,
+#searchbar div *
+{
+    background-color: #000 !important;
 }
 
 .r_div:hover {
@@ -248,16 +302,18 @@ div.gs-webResult.gs-result a.gs-title:visited b {
     color: #5cb441;
 }
 
-.login {
-    background: none !important;
-    content: url("https://media.discordapp.net/attachments/1099825312424013874/1139701740896264304/image.png");
-}
-
 hr.ince {
   background-image: linear-gradient(to right, rgb(0, 149, 255), rgb(0, 0, 0), rgb(0, 149, 255));
 }
 
+.tiles_header span:after {
+    visibility: visible;
+    top: 0;
+    left: 0;
+    content: " (>﹏<｡)";
+}
+
 /* remove this rule to use a custom logo */
 #Image1 {
-    content: url("https://media.discordapp.net/attachments/1099825312424013874/1139709968086478950/sclartado.png");
+    content: url("https://raw.githubusercontent.com/Arnolxu/artado-scripts/main/sclartado.png");
 }
